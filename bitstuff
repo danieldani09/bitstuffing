@@ -41,3 +41,33 @@ int main()
         printf("%d",b[i]);
     return 0;
 }
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#include <conio.h>
+void main()
+{
+    int i=0,count=0;
+    char data[80];
+    printf("enter the data bits");
+    scanf("%s",data);
+    printf("data bits after bit stuffing");
+    for(i=0;i<strlen(data);i++)
+    {
+        if(data[i]=='1')
+        {
+            count++;
+        }
+        printf("%c",data[i]);
+        if(count==5)
+        {
+            printf("0");
+            count=0;
+        }
+        
+    }
+    
+}
